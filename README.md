@@ -5,5 +5,5 @@ This project is my graduate project. Agumented reality is the popular technology
 Used technologies
 -Vuforia SDK
 -Unity 2017
--Google Place API
+-SQLite
 
