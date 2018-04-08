@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UpdateGPS : MonoBehaviour {
 
@@ -31,6 +32,9 @@ public class UpdateGPS : MonoBehaviour {
 	}
 	void Update () {
 		float acceleration = Mathf.Abs(Input.acceleration.y);
+		if(Input.GetKeyDown(KeyCode.Escape)){
+           SceneManager.LoadScene(1); 
+		}
 		if(acceleration>=0.5){
 			showKM();
 		}

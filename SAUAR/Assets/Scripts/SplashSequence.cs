@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SplashSequence : MonoBehaviour {
 
 	void Start () {
-         // StartCoroutine(Splash());
+         StartCoroutine(Splash());
 	}
 
 	IEnumerator Splash(){

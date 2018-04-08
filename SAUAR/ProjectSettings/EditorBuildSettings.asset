@@ -12,5 +12,23 @@ EditorBuildSettings:
     path: Assets/Menu.unity
     guid: 55eea24762065475e9ef22a99e6c2b33
   - enabled: 1
+    path: Assets/Enstitu.unity
+    guid: 5b67f194e9fa5462e8481535b4d3539c
+  - enabled: 1
+    path: Assets/Fakulte.unity
+    guid: 58fbdbfa247c04dde9c6c02186d548dd
+  - enabled: 1
+    path: Assets/Fen Edebiyat.unity
+    guid: 2118090468ef741f19e65bd7167034f6
+  - enabled: 1
+    path: Assets/Muhendislik.unity
+    guid: 26aa6a601c6f64e96bad36f6e4c12a56
+  - enabled: 1
+    path: Assets/Teknoloji.unity
+    guid: 605f413ec7e8c4fbab9093708754581f
+  - enabled: 1
+    path: Assets/Ortak.unity
+    guid: bdd3af3d7bddf415e96fb61e5b7326ab
+  - enabled: 1
     path: Assets/Camera.unity
     guid: bd9c4957a3a154eafb481a891d5d262f

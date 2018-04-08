@@ -12,8 +12,8 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: sauarproject
-  productName: "Ak\u0131ll\u0131 Kamp\xFCs"
-  defaultCursor: {fileID: 2800000, guid: d9a27ac859bb44478bea38210ce6dd0b, type: 3}
+  productName: SAUAR
+  defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.1764706, g: 0.2784314, b: 0.77647066, a: 1}
   m_ShowUnitySplashScreen: 1

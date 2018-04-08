@@ -52,12 +52,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\DataService.cs" />
-     <Compile Include="Assets\Scripts\Enstitu.cs" />
-     <Compile Include="Assets\Scripts\Fakulte.cs" />
      <Compile Include="Assets\Scripts\GPS.cs" />
      <Compile Include="Assets\Scripts\Location.cs" />
-     <Compile Include="Assets\Scripts\MenuEnstitu.cs" />
-     <Compile Include="Assets\Scripts\MenuFakulte.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Routing.cs" />
      <Compile Include="Assets\Scripts\SplashSequence.cs" />
      <Compile Include="Assets\Scripts\SQLite.cs" />
