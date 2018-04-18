@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class NearByLocation {
 	public string name { get; set; }
-	public string km{get; set;}
+	public float km{get; set;}
     
-	public NearByLocation(string isim, string uzaklik){
+	public NearByLocation(string isim, float uzaklik){
 		this.name=isim;
 		this.km=uzaklik;
 	}
