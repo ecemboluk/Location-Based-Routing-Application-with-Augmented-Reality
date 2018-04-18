@@ -9,10 +9,7 @@ public class UpdateGPS : MonoBehaviour {
     public Text coordinates,kmdata;
     public RawImage image;
 	float distanceKM,lat,lon;
-
 	void Start(){
-		Input.location.Start ();
-	    Input.compass.enabled = true;
         var ds= new DataService("LocationSAU.db");
 		var konum=ds.GetLocationNamed(PlayerPrefs.GetString("Location","Konum Bulunamadı"));
 		lat=FindLocationlat(konum);
@@ -72,8 +69,8 @@ public class UpdateGPS : MonoBehaviour {
 	void showKM(){
 		distanceKM=distanceInKmBetweenEarthCoordinates(GPS.Instance.latitude, GPS.Instance.longitude, lat, lon);
 		coordinates.enabled=true;
-		image.enabled=true;
 		kmdata.enabled=true;
+		image.enabled=true;
 		coordinates.text =PlayerPrefs.GetString("Location","Konum Bulunamadı");
 		if(distanceKM<1){
 			distanceKM=distanceKM*1000;
@@ -83,21 +80,4 @@ public class UpdateGPS : MonoBehaviour {
            kmdata.text =distanceKM.ToString("0.##")+" km.";
 		}
 	}
-	float toRad(float degrees) {
-		return (float)(degrees * Mathf.PI / 180);
-    }
-	float getDegrees(float lat1, float lon1, float lat2, float lon2, float headX) {
-       float dLat = toRad(lat2-lat1);
-       float dLon = toRad(lon2-lon1);
-       lat1 = toRad(lat1);
-       lat2 = toRad(lat2);
-       float y = Mathf.Sin(dLon) * Mathf.Cos(lat2);
-       float x = Mathf.Cos(lat1)*Mathf.Sin(lat2) - Mathf.Sin(lat1)*Mathf.Cos(lat2)*Mathf.Cos(dLon);
-       float brng = Mathf.Atan2(y, x)*Mathf.Rad2Deg;
-       if(brng<0) {
-        brng=360-Mathf.Abs(brng);
-       }
-       return brng - headX;
-   }
-    
 }

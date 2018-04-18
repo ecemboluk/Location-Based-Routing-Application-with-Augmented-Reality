@@ -14,9 +14,6 @@ public class MainMenu : MonoBehaviour {
 	   else if(choose.text=="Fakülteler"){
           SceneManager.LoadScene(3);
 	   }
-	   else if(choose.text=="Ortak Alanlar"){
-          SceneManager.LoadScene(7);
-	   }
    }
 
    public void onClickReturn(){
@@ -36,5 +33,11 @@ public class MainMenu : MonoBehaviour {
    }
    public void onClickT(){
        SceneManager.LoadScene(6);
+   }
+   public void onClick1(){
+       SceneManager.LoadScene(7);
+   }
+   public void onClick2(){
+       SceneManager.LoadScene(9);
    }
 }

@@ -55,6 +55,8 @@
      <Compile Include="Assets\Scripts\GPS.cs" />
      <Compile Include="Assets\Scripts\Location.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\NearByLocation.cs" />
+     <Compile Include="Assets\Scripts\NearbyPlace.cs" />
      <Compile Include="Assets\Scripts\Routing.cs" />
      <Compile Include="Assets\Scripts\SplashSequence.cs" />
      <Compile Include="Assets\Scripts\SQLite.cs" />

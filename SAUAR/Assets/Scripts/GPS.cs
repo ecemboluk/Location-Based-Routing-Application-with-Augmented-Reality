@@ -6,17 +6,21 @@ public class GPS : MonoBehaviour {
 
 	public float latitude;
 	public float longitude;
+    public float degree;
 	private int maxWait=20;
 
 	public static GPS Instance { get; set;}
 
 	// Use this for initialization
-	void Start () {
+	void Update () {
       
 	  Instance=this;
-	  StartCoroutine(LocationStart());
+	  latitude=Input.location.lastData.latitude;
+	  longitude=Input.location.lastData.longitude;
+      degree=Input.compass.trueHeading;
+      
 	}
-	IEnumerator LocationStart()
+	IEnumerator Start()
     {
         // First, check if user has location service enabled
         if (!Input.location.isEnabledByUser)
@@ -24,7 +28,7 @@ public class GPS : MonoBehaviour {
 
         // Start service before querying location
         Input.location.Start();
-
+        Input.compass.enabled = true;
         // Wait until service initializes
         int maxWait = 20;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
@@ -50,10 +54,8 @@ public class GPS : MonoBehaviour {
         {
 			latitude=Input.location.lastData.latitude;
 			longitude=Input.location.lastData.longitude;
+            degree=Input.compass.trueHeading;
             // Access granted and location value could be retrieved
         }
-
-        // Stop service if there is no need to query location updates continuously
-        Input.location.Stop();
     }
 }

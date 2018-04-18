@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Camera.unity
     guid: bd9c4957a3a154eafb481a891d5d262f
+  - enabled: 1
+    path: Assets/NearBy.unity
+    guid: b35f29622738d430b9bcbfc06ec49410
