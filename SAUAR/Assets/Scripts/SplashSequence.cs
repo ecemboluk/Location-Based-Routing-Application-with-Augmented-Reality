@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class SplashSequence : MonoBehaviour {
 
 	void Start () {
-         StartCoroutine(Splash());
+		Screen.orientation = ScreenOrientation.Portrait;
+        StartCoroutine(Splash());
 	}
 
 	IEnumerator Splash(){

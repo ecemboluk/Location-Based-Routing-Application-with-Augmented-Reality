@@ -9,6 +9,7 @@ public class Routing : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	   Screen.orientation = ScreenOrientation.Portrait;
        Input.location.Start ();
 	   Input.compass.enabled = true;
 	   route=GameObject.FindWithTag("route");
@@ -19,6 +20,7 @@ public class Routing : MonoBehaviour {
 	}
 	// Update is called once per frame
 	void Update () {
+		Screen.orientation = ScreenOrientation.Portrait;
 		float degree=Input.compass.trueHeading;
 		float getdegree=getDegrees(GPS.Instance.latitude, GPS.Instance.longitude, lat, lon, degree);
 		route.transform.rotation= Quaternion.Euler(new Vector3(0, getdegree, 0));

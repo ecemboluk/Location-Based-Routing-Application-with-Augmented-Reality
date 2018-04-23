@@ -10,6 +10,7 @@ public class UpdateGPS : MonoBehaviour {
     public RawImage image;
 	float distanceKM,lat,lon;
 	void Start(){
+		Screen.orientation = ScreenOrientation.Portrait;
         var ds= new DataService("LocationSAU.db");
 		var konum=ds.GetLocationNamed(PlayerPrefs.GetString("Location","Konum Bulunamadı"));
 		lat=FindLocationlat(konum);
@@ -28,6 +29,7 @@ public class UpdateGPS : MonoBehaviour {
 		}
 	}
 	void Update () {
+		Screen.orientation = ScreenOrientation.Portrait;
 		float acceleration = Mathf.Abs(Input.acceleration.y);
 		if(Input.GetKeyDown(KeyCode.Escape)){
            SceneManager.LoadScene(1); 

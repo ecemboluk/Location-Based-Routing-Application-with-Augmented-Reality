@@ -7,6 +7,13 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour {
    public Text choose;
    public Text location;
+
+   void Start(){
+       Screen.orientation = ScreenOrientation.Portrait;
+   }
+   void Update(){
+      Screen.orientation = ScreenOrientation.Portrait;
+   }
    public void onClick(){
 	   if(choose.text=="Enstitüler"){
           SceneManager.LoadScene(2);

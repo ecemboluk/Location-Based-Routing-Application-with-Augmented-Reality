@@ -7,8 +7,9 @@ using UnityEngine.SceneManagement;
 public class NearbyPlace : MonoBehaviour {
 
     float distanceKM,lat,lon, distanceKM1,getDegre;
+	public RawImage image;
 	int c1=0,c2=0,c3=0,c4=0;
-	public Text location1,location2,location3,km1,km2;
+	public Text location1,km1;
 	List<NearByLocation> liste1 = new List<NearByLocation>();
 	List<NearByLocation> liste2 = new List<NearByLocation>();
 	List<NearByLocation> liste3 = new List<NearByLocation>();
@@ -23,10 +24,12 @@ public class NearbyPlace : MonoBehaviour {
 	List<NearByLocation> liste12 = new List<NearByLocation>();
 	// Use this for initialization
 	void Start () {
+		Screen.orientation = ScreenOrientation.Portrait;
 	   nearbyPlace();
 	}
 	// Update is called once per frame
 	void Update () {
+		Screen.orientation = ScreenOrientation.Portrait;
 		if(Input.GetKeyDown(KeyCode.Escape)){
            SceneManager.LoadScene(1); 
 		}
@@ -35,13 +38,13 @@ public class NearbyPlace : MonoBehaviour {
 	public void nearbyPlace(){
 		var ds= new DataService("LocationSAU.db");
 		var konum=ds.GetLocations();
-		foreach (var item in konum)
+        foreach (var item in konum)
 		{
-			distanceKM1=distanceInKmBetweenEarthCoordinates(40.74087f, 30.32910f,item.lat,item.lng);
+			distanceKM1=distanceInKmBetweenEarthCoordinates(40.74248f, 30.33220f,item.lat,item.lng);
 			if(distanceKM1<1){
 				distanceKM1=distanceKM1/0.001f;
-				if(distanceKM1<300){
-					getDegre=getDegrees(40.74087f, 30.32910f,item.lat,item.lng);
+				if(distanceKM1<100){
+					getDegre=getDegrees(40.74248f, 30.33220f,item.lat,item.lng);
 					if(getDegre<=30){
                        liste1.Add(new NearByLocation(item.name,distanceKM1));		   
 					}
@@ -129,7 +132,7 @@ public class NearbyPlace : MonoBehaviour {
 			   location1.text=liste12[0].name;
 		       km1.text=((int)liste12[0].km).ToString()+".m";
 		}
-	}
+	  }
 
 	float degreesToRadians(float degrees) {
 		return (float)(degrees * Mathf.PI / 180);
